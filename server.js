@@ -3,7 +3,7 @@ const StellarSdk = require('@stellar/stellar-sdk');
 const path = require('path');
 
 const app = express();
-const port = 3002;
+const port = process.env.PORT || 3002;
 
 // Use testnet
 const server = new StellarSdk.Horizon.Server('https://horizon-testnet.stellar.org');
